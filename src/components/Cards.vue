@@ -18,6 +18,7 @@ export default {
 <style>
 .post img{
     width: 150px;
+    border-radius: 5px;
 }
 
 .post h1{

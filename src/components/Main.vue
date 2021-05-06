@@ -70,6 +70,7 @@ export default {
     max-width: 200px;
     margin: 1rem;
     background: $back;
+    border-radius: 5px;
     padding: 1rem;
 }
 </style>
