@@ -3,7 +3,7 @@
       <div class="container-main">
           <div class="container-cards">
               <div v-for="(card, index) in cardsList" :key="index" class="cards">
-                  <Cards />
+                  <Cards :info = "card"/>
               </div>
           </div>
       </div>
@@ -34,7 +34,8 @@ export default {
         getCards(){
             axios.get(this.apiURL)
             .then(res =>{
-                this.cardsList = res.data;
+                this.cardsList = res.data.response;
+                // console.log('console log', this.cardsList = res.data.response.poster);
                 this.loading = false;
             })
             .catch(err =>{
@@ -57,5 +58,18 @@ export default {
     margin: 0 auto;
     width: 1170px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.cards{
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    max-width: 200px;
+    margin: 1rem;
+    background: $back;
+    padding: 1rem;
 }
 </style>
