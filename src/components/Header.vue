@@ -13,12 +13,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './scss/general.scss';
+@import '../scss/general.scss';
 
 
 .logo-container{
     height: 80px;
-    background: #000;
+    background: $primary;
     display: flex;
     align-items: center;
 }
