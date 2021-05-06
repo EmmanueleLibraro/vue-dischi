@@ -2,8 +2,8 @@
   <main>
       <div class="container-main">
           <div class="container-cards">
-              <div class="cards">
-                  cards
+              <div v-for="(card, index) in cardsList" :key="index" class="cards">
+                  <Cards />
               </div>
           </div>
       </div>
@@ -12,9 +12,14 @@
 
 <script>
 import axios from 'axios';
+import Cards from '@/components/Cards.vue';
+
 
 export default {
     name: 'Main',
+    components: {
+        Cards,
+    },
     data(){
         return {
             apiURL: 'https://flynn.boolean.careers/exercises/api/array/music',
@@ -49,6 +54,7 @@ export default {
 }
 
 .container-cards{
+    margin: 0 auto;
     width: 1170px;
     display: flex;
 }
