@@ -56,7 +56,7 @@ export default {
 
 .container-cards{
     margin: 0 auto;
-    width: 1170px;
+    // width: 1270px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -68,6 +68,7 @@ export default {
     text-align: center;
     color: #fff;
     max-width: 200px;
+    flex-basis: calc(100% / 8 );
     margin: 1rem;
     background: $back;
     border-radius: 5px;
